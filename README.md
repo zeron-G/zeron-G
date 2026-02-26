@@ -32,15 +32,14 @@
 
 ---
 
-### GitHub Stats
+### GitHub Activity
 
 <p align="center">
-  <img width="390" src="https://github-readme-stats.vercel.app/api?username=zeron-G&show_icons=true&rank_icon=github&theme=tokyonight&hide_border=true&border_radius=10&count_private=true" alt="GitHub Stats" />
-  <img width="390" src="https://streak-stats.demolab.com/?user=zeron-G&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub Streak" />
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=zeron-G&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" />
 </p>
 
 <p align="center">
-  <img width="390" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeron-G&layout=compact&theme=tokyonight&hide_border=true&border_radius=10&langs_count=6&hide=html,css,scss" alt="Top Languages" />
+  <img src="https://github-profile-trophy.vercel.app/?username=zeron-G&theme=tokyonight&no-frame=true&row=1&column=7" alt="Trophies" />
 </p>
 
 ---
