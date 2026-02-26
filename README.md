@@ -35,12 +35,12 @@
 ### GitHub Stats
 
 <p align="center">
-  <img width="390" src="https://github-readme-stats.vercel.app/api?username=zeron-G&show_icons=true&theme=tokyonight&hide_border=true&border_radius=10&count_private=true" alt="GitHub Stats" />
-  <img width="390" src="https://github-readme-streak-stats.herokuapp.com/?user=zeron-G&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub Streak" />
+  <img width="390" src="https://github-readme-stats.vercel.app/api?username=zeron-G&show_icons=true&rank_icon=github&theme=tokyonight&hide_border=true&border_radius=10&count_private=true" alt="GitHub Stats" />
+  <img width="390" src="https://streak-stats.demolab.com/?user=zeron-G&theme=tokyonight&hide_border=true&border_radius=10" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img width="390" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeron-G&layout=compact&theme=tokyonight&hide_border=true&border_radius=10&langs_count=8" alt="Top Languages" />
+  <img width="390" src="https://github-readme-stats.vercel.app/api/top-langs/?username=zeron-G&layout=compact&theme=tokyonight&hide_border=true&border_radius=10&langs_count=6&hide=html,css,scss" alt="Top Languages" />
 </p>
 
 ---
