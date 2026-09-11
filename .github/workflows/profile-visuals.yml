@@ -1,0 +1,73 @@
+name: Refresh profile visuals
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/profile_visuals.py'
+      - '.github/workflows/profile-visuals.yml'
+  schedule:
+    - cron: '23 6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: profile-visuals-main
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Generate validated cards from GitHub (no external image host)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/profile_visuals.py --probe
+      - name: Confirm both READMEs use the local assets
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, xml.etree.ElementTree as ET
+          for name in ('README.md', 'README.zh-CN.md'):
+              text = Path(name).read_text()
+              assert './assets/generated/contribution-activity.svg' in text
+              assert './assets/generated/profile-trophies.svg' in text
+              assert 'github-contribution-grid-snake.svg' in text
+              assert 'Student pilot' in text or '飞行员学员' in text
+          snapshot = json.loads(Path('assets/generated/snapshot.json').read_text())
+          assert len(snapshot['days']) == 31
+          for name in ('contribution-activity.svg', 'profile-trophies.svg'):
+              root = ET.parse(Path('assets/generated') / name).getroot()
+              assert root.tag == '{http://www.w3.org/2000/svg}svg'
+          print('PASS: valid SVGs, complete calendar, bilingual image links, existing personal content retained')
+          PY
+      - name: Render the SVG files with Chromium when available
+        run: |
+          mkdir -p /tmp/profile-previews
+          if command -v google-chrome >/dev/null; then
+            for name in contribution-activity profile-trophies; do
+              google-chrome --headless --no-sandbox --disable-gpu --hide-scrollbars --no-pdf-header-footer --window-size=1240,450 --screenshot="/tmp/profile-previews/${name}.png" "file://$PWD/assets/generated/${name}.svg" >/dev/null 2>&1
+              test -s "/tmp/profile-previews/${name}.png"
+            done
+          fi
+      - uses: actions/upload-artifact@v4
+        with:
+          name: profile-visuals
+          path: |
+            assets/generated
+            /tmp/profile-previews
+          retention-days: 14
+      - name: Commit only images, the aggregate snapshot and image references
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/generated/contribution-activity.svg assets/generated/profile-trophies.svg assets/generated/snapshot.json README.md README.zh-CN.md
+          if git diff --cached --quiet; then
+            echo 'No changes.'
+            exit 0
+          fi
+          git commit -m 'chore: refresh self-hosted profile visuals [skip ci]'
+          git pull --rebase origin main
+          git push origin HEAD:main
