@@ -75,13 +75,13 @@ Gao, R. (2024). [*Trend Prediction Analysis of Shanghai Composite Index Based on
 
 ## 📈 活动与贡献轨迹
 
-<a href="https://github.com/zeron-G?tab=overview"><img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=zeron-G&bg_color=0d1724&color=a8cad3&line=ebbc84&point=95d9de&area=true&hide_border=true" alt="高荣泽的 GitHub 贡献活动"></a>
+<a href="https://github.com/zeron-G?tab=overview"><img width="100%" src="./assets/generated/contribution-activity.svg" alt="高荣泽的 GitHub 贡献活动"></a>
 
-<p align="center"><img src="https://github-profile-trophy.vercel.app/?username=zeron-G&theme=tokyonight&no-frame=true&row=1&column=7" alt="GitHub 主页奖杯"></p>
+<p align="center"><img src="./assets/generated/profile-trophies.svg" alt="GitHub 主页奖杯"></p>
 
 ![贡献蛇形动画](https://raw.githubusercontent.com/zeron-G/zeron-G/output/github-contribution-grid-snake.svg)
 
-<sub>活动图与奖杯由外部服务提供；服务不可用时，可直接查看 [GitHub 贡献页](https://github.com/zeron-G?tab=overview)。</sub>
+<sub>贡献图与奖杯风格统计卡由本仓库每日生成，数据来自 GitHub；卡片显示实际统计，不代表 GitHub 官方奖项。刷新失败时保留上次成功的快照。</sub>
 
 ---
 

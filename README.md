@@ -87,13 +87,13 @@ More projects live in [my repositories](https://github.com/zeron-G?tab=repositor
 
 ## 📈 Activity & contribution trail
 
-<a href="https://github.com/zeron-G?tab=overview"><img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=zeron-G&bg_color=0d1724&color=a8cad3&line=ebbc84&point=95d9de&area=true&hide_border=true" alt="Rongze Gao's contribution activity"></a>
+<a href="https://github.com/zeron-G?tab=overview"><img width="100%" src="./assets/generated/contribution-activity.svg" alt="Rongze Gao's contribution activity"></a>
 
-<p align="center"><img src="https://github-profile-trophy.vercel.app/?username=zeron-G&theme=tokyonight&no-frame=true&row=1&column=7" alt="GitHub profile trophies"></p>
+<p align="center"><img src="./assets/generated/profile-trophies.svg" alt="GitHub profile trophies"></p>
 
 ![Contribution snake](https://raw.githubusercontent.com/zeron-G/zeron-G/output/github-contribution-grid-snake.svg)
 
-<sub>Activity and trophy images are provided by external services; my [GitHub contribution page](https://github.com/zeron-G?tab=overview) remains the source when those services are unavailable.</sub>
+<sub>Contribution and milestone SVGs are generated daily in this repository from GitHub data. The cards show real statistics, not official GitHub awards. If a refresh fails, the last successful snapshot stays visible.</sub>
 
 ---
 
